@@ -1,14 +1,12 @@
-
-import type { CodegenConfig } from '@graphql-codegen/cli';
+import type { CodegenConfig } from "@graphql-codegen/cli";
 
 const config: CodegenConfig = {
   overwrite: true,
-  schema: "./schema.graphql",
+  schema: "https://demo.saleor.io/graphql/",
+  // schema: "schema.json",
   generates: {
-    "src/generated/graphql.ts": {
-      plugins: ["typescript"]
-    }
-  }
+    "src/generated/bad-models.dart": [{ "flutter-freezed": {} }],
+  },
 };
 
 export default config;
